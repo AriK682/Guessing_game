@@ -40,3 +40,17 @@ h3{
     border-radius: 5px;
     margin-top: 10px;
 }
+#speak-again {
+    background-color: #0b2c16;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#speak-again:hover{
+    cursor: pointer;
+    background-color: #e4e4e4;
+}
