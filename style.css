@@ -1,0 +1,56 @@
+*
+before,
+after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #2f3542 url('img/Pink Post Background _ Pink Wavy Grid Lines.jpeg') no-repeat left center/cover;
+  color: #48071e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h3{
+    margin-bottom: 0;
+}
+
+.msg{
+    font-size: 1.5rem;
+    margin-top: 40px;
+}
+
+.box{
+    border: 1px solid #dedede;
+    display: inline-block;
+    font-size: 30px;
+    margin: 20px;
+    padding: 20px;
+}
+.play-again{
+    padding: 8px 15px;
+    border: 0;
+    background-color: #facdde;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+#speak-again {
+    background-color: #501324;
+    color:#d2195a;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#speak-again:hover{
+    cursor: pointer;
+    background-color: #e4e4e4;
+}
