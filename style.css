@@ -5,8 +5,8 @@ after {
 }
 
 body {
-  background: #2f3542 url('img/bg.jpg') no-repeat left center/cover;
-  color: #fff;
+  background: #2f3542 url('img/Pink Post Background _ Pink Wavy Grid Lines.jpeg') no-repeat left center/cover;
+  color: #48071e;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,13 +36,13 @@ h3{
 .play-again{
     padding: 8px 15px;
     border: 0;
-    background-color: #f4f4f4;
+    background-color: #facdde;
     border-radius: 5px;
     margin-top: 10px;
 }
 #speak-again {
-    background-color: #0b2c16;
-    color: white;
+    background-color: #501324;
+    color:#d2195a;
     border: none;
     border-radius: 10px;
     padding: 12px 24px;
