@@ -18,7 +18,20 @@ recognition.start();
 function onSpeak(event) {
     const msg = event.results[0][0].transcript;
     console.log(msg);
+    writeMessage(msg);
 }
 
 //speak result
 recognition.addEventListener('result', onSpeak);
+
+//write what user speaks
+function writeMessage(msg) {
+    msgEl.innerHTML = '';
+    const div = document.createElement('div');
+    div.textContent = 'You said:  ';
+    const span = document.createElement('span');
+    span.classList.add('box');
+    span.textContent = msg;
+    
+    msgEl.append(div, span);
+}
