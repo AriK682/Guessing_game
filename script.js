@@ -60,7 +60,7 @@ function checkNumber(msg) {
     console.log(`adjusting ${msg} to ${wordToNumber[msg]}`);
     msg = wordToNumber[msg];
   } // Convert to number after adjustments
-  
+
   const num = Number(msg);  // reassign the value below
   
   // Check if the spoken content is a valid number
@@ -82,6 +82,11 @@ function checkNumber(msg) {
 
   // Check the number and provide feedback
   if (num === randomNum) {
+
+    gamewon = true;
+    speakButton.style.display = 'none'; // Hide the speak button when the game is won
+    recognition.stop(); // Stop recognition when the game is won
+
     const h2 = document.createElement('h2');
     h2.textContent = `Congrats! You have guessed the number! It was ${num}`;
 
@@ -106,3 +111,29 @@ function checkNumber(msg) {
     
 }
 
+//select the speak again button
+const speakButton = document.getElementById('speak-again');
+
+//track if the user is speaking or not
+let isListening = false;
+let gamewon = false;
+
+// Add event listeners for recognition start and end
+recognition.addEventListener('start', () => {
+    isListening = true;
+    console.log('Voice recognition started. Speak now.');
+});
+
+recognition.addEventListener('end', () => {
+    isListening = false;
+    console.log('Voice recognition ended.');
+});
+
+//restart recognition when the speak button is clicked
+speakButton.addEventListener('click', () => {
+    if (!isListening && !gamewon) {
+        recognition.start();
+    } else if (gamewon) {
+        window.location.reload();
+    }
+});
